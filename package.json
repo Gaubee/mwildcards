@@ -1,0 +1,23 @@
+{
+  "name": "mwildcards",
+  "version": "1.0.0",
+  "description": "A very simple wildcard match. just use * and -.",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "node dist/test/1.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaubee/mwildcards.git"
+  },
+  "keywords": [
+    "wildcards",
+    "mutil-match"
+  ],
+  "author": "Gaubee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gaubee/mwildcards/issues"
+  },
+  "homepage": "https://github.com/Gaubee/mwildcards#readme"
+}
