@@ -1,10 +1,12 @@
 {
   "name": "mwildcards",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very simple wildcard match. just use * and -.",
+  "types": "dist/src/index.d.ts",
   "main": "dist/src/index.js",
   "scripts": {
-    "test": "node dist/test/1.test.js"
+    "test": "node dist/test/1.test.js",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
