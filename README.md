@@ -5,7 +5,12 @@ very simple. I created this project to configure environment variable parameters
 ## example
 
 ```ts
-import 
+import Mwildcards from '../mwildcards';
+const env_trace = process.env.TRACE || '';
+const mw = new Mwildcards(env_trace);
+
+/// your code.
+mw.isMatch('balabala');
 ```
 
 ```shell
