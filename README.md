@@ -7,7 +7,7 @@ very simple. I created this project to configure environment variable parameters
 ```ts
 import Mwildcards from '../mwildcards';
 const env_trace = process.env.TRACE || '';
-const mw = new Mwildcards(env_trace);
+const mw = new Mwildcards(env_trace,{ nocase: true });
 
 /// your code.
 mw.isMatch('balabala');
