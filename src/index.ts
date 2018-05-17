@@ -1,3 +1,6 @@
+const match_$$_symbol = Symbol("**");
+const match_$_symbol = Symbol("*");
+
 export default class Mwildcards {
     private _skips: RegExp[] = [];
     private _querys: RegExp[] = [];
@@ -13,7 +16,13 @@ export default class Mwildcards {
             if (!split) {
                 continue;
             }
-            split = split.replace(/\*/g, '[\\w\\W]*?');
+            const $$: Array<string> = split.split(/\*{2,}/g);
+            for (let i = 0; i < $$.length; i += 2) {
+                $$.splice(i, 1, $$[i].replace(/\*/g, '\\w*?'), '[\\w\\W]*?');
+            }
+            $$.pop();
+            split = $$.join('');
+
             if (split[0] === '-') {
                 skips.push(new RegExp(`^${split.substr(1)}$`, regexp_flags));
             } else {

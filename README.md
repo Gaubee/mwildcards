@@ -16,3 +16,9 @@ mw.isMatch('balabala');
 ```shell
 TRACE="module/*,-module/XD" node index.js
 ```
+
+## doc
+
+`*`  : match **Letters, numbers or underscore**.
+`**` : match any thing.
+`-`  : if starts with `-`, matches will be skip.
