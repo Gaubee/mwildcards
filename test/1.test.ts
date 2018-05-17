@@ -1,12 +1,8 @@
 import Mwildcards from '../src';
 const mw = new Mwildcards('module/*, -module/XD');
 
-if (mw.isMatch('module/1') !== true) {
-    throw new Error("fail")
-}
-if (mw.isMatch('module/cc/cc') !== true) {
-    throw new Error("fail")
-}
-if (mw.isMatch('module/XD') !== false) {
-    throw new Error("fail")
-}
+console.assert(mw.isMatch('module/1'), 'fail');
+console.assert(mw.isMatch('module/cc/cc'), 'fail');
+console.assert(!mw.isMatch('module/XD'), 'fail');
+
+console.log("√ all passed.");
